@@ -6,6 +6,12 @@ Medium green: #55c57a --> rgb(40, 180, 131)
 Dark green: #28b485
 
 */
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box; }
+
 @keyframes moveInLeft {
   0% {
     transform: translateX(-10rem);
@@ -33,6 +39,14 @@ Dark green: #28b485
   100% {
     transform: translate(0);
     opacity: 1; } }
+
+body {
+  padding: 3rem;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  /* font-size: 16px; */
+  line-height: 1.7;
+  color: #777; }
 
 .heading-primary {
   margin-bottom: 6rem;
