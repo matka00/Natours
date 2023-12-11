@@ -547,6 +547,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 75%;
+    max-height: 90vh;
     display: table;
     border-radius: 3px;
     box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
@@ -555,17 +556,45 @@ body {
     opacity: 0;
     transform: translate(-50%, -50%) scale(0.25);
     transition: all 0.5s 0.2s; }
+    @media (max-width: 75em) {
+      .popup__content {
+        display: block;
+        overflow: scroll; } }
+    @media (max-width: 56.25em) {
+      .popup__content {
+        width: 80%;
+        display: block; } }
   .popup__left {
     width: 33.333333%;
-    display: table-cell; }
+    display: table-cell;
+    vertical-align: middle; }
+    @media (max-width: 75em) {
+      .popup__left {
+        width: 100%;
+        display: block;
+        padding: 3rem 4rem 0 5rem; } }
+    @media (max-width: 37.5em) {
+      .popup__left {
+        padding: 2rem 1.5rem 0 2rem; } }
   .popup__right {
     width: 66.666666%;
     display: table-cell;
     padding: 3rem 5rem;
     vertical-align: middle; }
+    @media (max-width: 75em) {
+      .popup__right {
+        width: 100%;
+        display: block; } }
+    @media (max-width: 37.5em) {
+      .popup__right {
+        padding: 2rem 2.5rem; } }
   .popup__img {
     width: 100%;
     display: block; }
+    @media (max-width: 75em) {
+      .popup__img {
+        width: 49%;
+        display: inline-block; } }
   .popup__text {
     margin-bottom: 4rem;
     text-align: justify;
@@ -580,6 +609,10 @@ body {
     -ms-hyphens: auto;
     -webkit-hyphens: auto;
     hyphens: auto; }
+    @media (max-width: 37.5em) {
+      .popup__text {
+        margin-bottom: 2rem;
+        column-count: 1; } }
   .popup:target {
     opacity: 1;
     visibility: visible; }
@@ -587,15 +620,22 @@ body {
     opacity: 1;
     transform: translate(-50%, -50%) scale(1); }
   .popup__close:link, .popup__close:visited {
+    width: 2rem;
     position: absolute;
     display: inline-block;
     line-height: 1;
     top: 2.5rem;
     right: 2.5rem;
+    text-align: end;
     font-size: 3rem;
     text-decoration: none;
+    text-shadow: 0 0 4px #fff;
     color: #777;
     transition: all 0.2s; }
+    @media (max-width: 37.5em) {
+      .popup__close:link, .popup__close:visited {
+        top: 1.5rem;
+        right: 1.5rem; } }
   .popup__close:hover {
     color: #55c57a; }
 
